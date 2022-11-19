@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="CWeb 1010 at Dunwoody">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Theresa">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        <title>Function to find URL and tags</title>
+
+        <style>
+            .container {
+                margin: 300px;
+                padding: 40px;
+                border: 2px solid black;
+                background-color: #33FFE3;
+                font-family: verdana, sans-serif;
+    
+            }
+        </style>
+
+    </head>
+    <html>
+        <body>
+            
+            <div class="container">
+
+           
+            <h1>The Document Object</h1>
+            
+            <p>The document.doctype.name is:</p>
+            
+            <p id="demo"></p>
+            
+            <script>
+                var thisPage = window.location.href;
+                
+                function getURL() {
+                    alert("The URL of this page is: " + window.location.href);
+                }
+                document.getElementById("demo").innerHTML = thisPage;
+            </script>
+            
+            <button type="button" onclick="getURL();">Get Page URL</button>
+            
+            <p id="demo2"></p> 
+            
+            <script>
+                const doctypeObj = document.doctype;
+                document.getElementById("demo2").innerHTML = doctypeObj.name;
+                
+                var str = document.title;
+                document.write("<p>Title: "+ str + "</p>");
+                
+                var str = document.head;
+                document.write("<p>Head info: "+ str + "</p>");
+                console.log (document.head);
+                
+                var str = document.cookie;
+                document.write("<p>cookie: "+ str + "</p>");
+                
+                var str = document.URL;
+                document.write("<p>URL: "+ str + "</p>");
+                
+                var str = document.scripts;
+                document.write("<p>Script info: "+ str + "</p>");
+                console.log (document.scripts);
+                
+            
+            </script>
+            
+  
+        <button onclick="myFunction()">Test</button>
+        <p id="demo3"></p>
+        
+        <script>
+            function myFunction() {
+                var x = document.doctype.name;
+                document.getElementById("demo3").innerHTML = x;
+            }
+        </script>
+        
+        
+        </body>
+    </html>                  
